@@ -1,0 +1,58 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@android:color/white"
+    android:layout_marginBottom="8dp">
+
+    <!-- 未完成訂單標題 -->
+    <TextView
+        android:id="@+id/tv_unfinished_order_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="未完成訂單"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:visibility="gone" /> <!-- 默認設為隱藏，僅在特定條件下顯示 -->
+
+    <!-- 訂單狀態 -->
+    <TextView
+        android:id="@+id/tv_order_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="接單狀況"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black" />
+
+    <!-- 其他訂單信息，比如取餐地點、剩餘時間等 -->
+    <TextView
+        android:id="@+id/tv_restaurant_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="取餐地點"
+        android:textSize="14sp"
+        android:layout_marginTop="4dp"
+        android:textColor="@android:color/darker_gray" />
+
+    <TextView
+        android:id="@+id/tv_time_remaining"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="取餐剩餘時間"
+        android:textSize="14sp"
+        android:layout_marginTop="4dp"
+        android:textColor="@android:color/darker_gray" />
+
+    <TextView
+        android:id="@+id/tv_order_items"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="點餐項目"
+        android:textSize="14sp"
+        android:layout_marginTop="4dp"
+        android:textColor="@android:color/darker_gray" />
+
+</LinearLayout>

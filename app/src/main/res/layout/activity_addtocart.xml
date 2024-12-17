@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Honeydew"
+    tools:context=".addtocart">
+
+    <!-- 圖片顯示 -->
+    <ImageView
+        android:id="@+id/Image"
+        android:layout_width="412dp"
+        android:layout_height="195dp"
+        android:src="@drawable/ic_launcher_foreground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 商品標題顯示 -->
+    <TextView
+        android:id="@+id/Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="192dp"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout3"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout3"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="title" />
+
+    <!-- 數量調整區域 -->
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="187dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="240dp"
+        android:background="@drawable/rounded_background"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/button_decrement"
+            android:layout_width="59dp"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/counter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:text="1"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/button_increment"
+            android:layout_width="59dp"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:textSize="16dp" />
+
+    </LinearLayout>
+
+    <!-- 加料選擇 -->
+    <CheckBox
+        android:id="@+id/addegg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="324dp"
+        android:text="加蛋+10$"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="@+id/addham"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/addcorn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="248dp"
+        android:layout_marginEnd="45dp"
+        android:text="加玉米+5$"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/addegg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/addegg" />
+
+    <CheckBox
+        android:id="@+id/addham"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="372dp"
+        android:text="加火腿+10$"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/addrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="加起士+10$"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/addham"
+        app:layout_constraintEnd_toEndOf="@+id/addcorn"
+        app:layout_constraintStart_toStartOf="@+id/addcorn"
+        app:layout_constraintTop_toTopOf="@+id/addham" />
+
+    <!-- 備註區域 -->
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="432dp"
+        android:text="備註"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/mutitext"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/mutitext"
+        android:layout_width="325dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="460dp"
+        android:background="@drawable/edittext_border"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="例如:不要香菜......"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 營養成分表 -->
+    <TableLayout
+        android:id="@+id/nutrition_table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:stretchColumns="*"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mutitext">
+
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:padding="8dp"
+                android:text="成分"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:padding="8dp"
+                android:text="數值"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:padding="8dp"
+                android:text="成分"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:padding="8dp"
+                android:text="數值"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:padding="8dp"
+                android:text="成分"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:padding="8dp"
+                android:text="數值"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:padding="8dp"
+                android:text="熱量" />
+            <TextView
+                android:id="@+id/calories_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:padding="8dp"
+                android:text="糖" />
+
+            <TextView
+                android:id="@+id/sugar_text"
+                android:layout_width="wrap_content"
+                android:layout_height="37dp"
+                android:background="@drawable/border"
+                android:padding="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:padding="8dp"
+                android:text="蛋白質" />
+            <TextView
+                android:id="@+id/protein_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:padding="8dp" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:padding="8dp"
+                android:text="碳水" />
+            <TextView
+                android:id="@+id/carbohydrates_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:padding="8dp"
+                android:text="脂肪" />
+            <TextView
+                android:id="@+id/text_fat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:padding="8dp" />
+        </TableRow>
+    </TableLayout>
+
+    <!-- 添加购物车按钮 -->
+    <Button
+        android:id="@+id/bt_addtocart"
+        android:layout_width="405dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="16dp"
+        android:onClick="bt_click"
+        android:text="加入購物車"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nutrition_table"
+        app:layout_constraintVertical_bias="0.089" />
+
+    <!-- 片段容器 -->
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/bt_addtocart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+
+        android:title="屏商"
+        android:id="@+id/Pinshan"/>
+    <item
+        android:title="民生"
+        android:id="@+id/Minshan"/>
+    <item
+
+        android:title="林森"
+        android:id="@+id/Linshan"/>
+
+</menu>

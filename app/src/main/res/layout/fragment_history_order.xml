@@ -1,0 +1,77 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".history_orderFragment">
+
+    <LinearLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- 最近未完成訂單的 RecyclerView -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            android:layout_marginBottom="20dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_recent_orders"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- 搜索栏和展開/收起按钮容器 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/searchView"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:iconifiedByDefault="false"
+                android:padding="8dp"
+                style="@style/CustomSearchView"
+                android:queryHint="Search your order history" />
+
+            <Button
+                android:id="@+id/btn_toggle_expand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:backgroundTint="?attr/colorPrimary"
+                android:text="展開/收起所有"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+        <!-- 展開式列表視圖，用於顯示歷史訂單 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="2dp"
+            android:layout_weight="1">
+
+            <ExpandableListView
+                android:id="@+id/expandableListView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/floatwhite"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="3dp"
+                android:padding="8dp" />
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</FrameLayout>

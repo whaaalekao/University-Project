@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 圓形圖像視圖樣式 -->
+    <style name="CircleImageView" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <!-- 自訂 SearchView 樣式 -->
+    <style name="CustomSearchView" parent="Widget.AppCompat.SearchView">
+        <item name="android:background">@drawable/search_view_background</item> <!-- 自訂背景，有底線 -->
+        <item name="queryBackground">@null</item> <!-- 移除查詢框背景 -->
+        <item name="android:layout_height">wrap_content</item> <!-- 設定 SearchView 的高度 -->
+    </style>
+
+</resources>

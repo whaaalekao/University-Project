@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!-- 通知要用 -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32"
+        tools:ignore="ScopedStorage" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/icon_1"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/icon_1"
+        android:supportsRtl="true"
+        android:theme="@style/Theme._20240416restart"
+        tools:targetApi="31">
+        <activity
+            android:name=".Health_setting"
+            android:exported="false" />
+        <activity
+            android:name=".personal_imformation"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity2"
+            android:exported="false" /> <!-- Activities that use the default global theme -->
+        <activity
+            android:name=".history_order"
+            android:exported="false" />
+        <activity
+            android:name=".paycheck"
+            android:exported="false" />
+        <activity
+            android:name=".Meichi_Pinshan_food"
+            android:exported="false" />
+        <activity
+            android:name=".Meichi_Pinshan_category"
+            android:exported="false" />
+        <activity
+            android:name=".addtocart"
+            android:exported="false" />
+        <activity
+            android:name=".sopping_car"
+            android:exported="false" />
+        <activity
+            android:name=".choose_school"
+            android:exported="false" />
+        <activity
+            android:name=".choose_restaurant"
+            android:exported="false" />
+        <activity
+            android:name=".sign_up"
+            android:exported="false" /> <!-- Activity that uses a custom theme -->
+        <activity
+            android:name=".new_start_stutent2"
+            android:exported="false"
+            android:label="@string/title_activity_new_start_stutent2"
+            android:theme="@style/Theme._20240416restart.NoActionBar" /> <!-- Main activity that launches the application -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,13 @@
+<!-- circular_background.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+
+    <solid android:color="@color/gainsboro" /> <!-- 背景顏色 -->
+
+    <size
+        android:width="70dp"
+        android:height="70dp" /> <!-- 控制圓形的大小 -->
+
+    <!-- 可選：增加邊框 -->
+
+</shape>

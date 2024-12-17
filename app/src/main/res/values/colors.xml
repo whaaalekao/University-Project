@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="grey">#F0FFFF</color>
+    <color name="floatwhite">#FFFAF0</color>
+    <color name="gainsboro">#DCDCDC</color>
+    <color name="Honeydew">#F4ECDA</color>
+    <color name="your_custom_color">#007172</color>
+    <color name="your_custom_darker_color">#007172</color>
+    <color name="your_background_color">#F4E2DE</color>
+    <color name="ww">#0FE6DEDE</color>
+    <color name="ab">#F0EAEA</color>
+    <color name="gray">#B0B0B0</color>
+    <color name="colorPrimary">#3F51B5</color> <!-- 替換為你的主題色 -->
+    <color name="light_gray">#D3D3D3</color>
+    <color name="dark_gray">#555555</color> <!-- 調整為您想要的深度 -->
+    <color name="primaryColor">#6200EE</color>
+    <color name="chart1">#5D798B</color>
+    <color name="chart2">#94A9B7</color>
+    <color name="chart3">#7B8E9B</color>
+    <color name="chart4">#99A9B6</color>
+    <color name="purple_500">#6200EE</color>
+
+    <color name="backgroundColor">#E48D2B</color>
+    <color name="backgroundColor1">#ffcb47</color>
+    <color name="bottom_nav_icon_color">#757575</color> <!-- 底部導航圖標顏色 -->
+    <color name="bottom_nav_text_color">#212121</color> <!-- 底部導航文字顏色 -->
+</resources>

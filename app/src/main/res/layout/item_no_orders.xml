@@ -1,0 +1,19 @@
+<!-- res/layout/item_no_orders.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@android:color/white"
+    android:layout_marginBottom="8dp">
+
+    <TextView
+        android:id="@+id/tv_empty_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="目前沒有未完成的訂單"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/darker_gray"
+        android:gravity="center" />
+</LinearLayout>
